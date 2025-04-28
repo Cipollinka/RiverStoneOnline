@@ -3,21 +3,11 @@ import { View, Image, StyleSheet } from 'react-native';
 
 const SplashScreen = ({ navigation }) => {
     useEffect(() => {
-        const timer = setTimeout(() => {
-            navigation.replace('MainTab'); // Переключение на главный экран
-        }, 2000);
-
-        return () => clearTimeout(timer);
+        navigation.replace('MainTab'); // Переключение на главный экран
     }, [navigation]);
 
     return (
-        <View style={styles.container}>
-            <Image
-                source={require('../assets/img/Logo.png')} // Убедись, что изображение есть в assets
-                style={styles.image}
-                resizeMode="contain"
-            />
-        </View>
+        <View style={styles.container} />
     );
 };
 
